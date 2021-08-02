@@ -2,11 +2,11 @@ from flask import Flask, render_template
 import json
 import random
 
-from doskvolDemonGenerator import new_demon
-from doskvolGhostgenerator import new_ghost
-from doskvolStreetsGenerator import new_street
-from doskvolBuildingGenerator import new_building
-from doskvolPeopleGenerator import new_people
+from src.doskvolDemonGenerator import new_demon
+from src.doskvolGhostgenerator import new_ghost
+from src.doskvolStreetsGenerator import new_street
+from src.doskvolBuildingGenerator import new_building
+from src.doskvolPeopleGenerator import new_people
 
 
 app = Flask(__name__)
