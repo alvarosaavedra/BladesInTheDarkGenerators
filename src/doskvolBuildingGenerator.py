@@ -24,20 +24,14 @@ def rc(variable):
 def print_building(quality):
     """This prints a random description of a building, the "quality" argument
     needs to be "rare" or "common"""
-    if quality == "rare":
-        print(
-            f"""
-        This {rc(exterior_details)} {rc(material)} {rc(rare_use)} is notable
-        for it's {rc(interior_details)} and {rc(interior_details)}"""
-        )
-    elif quality == "common":
-        print(
-            f"""
-        This {rc(exterior_details)} {rc(material)} {rc(common_use)} is
-        notable for it's {rc(interior_details)} and {rc(interior_details)}"""
-        )
-    else:
+    if (quality != "rare" and quality != "common"):
         print("Please enter 'rare' or 'common' as an argument")
+        return None
+    building = new_building(quality)
+    print(
+        f"""
+    This {building['exterior_details']} {building['material']} {building['use']} is notable
+    for it's {building['interior_details'][0]} and {building['interior_details'][1]}""")
 
 def new_building(quality):
     return {

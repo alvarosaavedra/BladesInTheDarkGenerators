@@ -22,12 +22,13 @@ def rc(variable):
 
 def print_street():
     """This will print text describing a random street"""
+    street = new_street()
     print(
         f"""
-    This {rc(moods)} {rc(infastructure_type)} is primarily used for {rc(use)}.
-    (A/An) {rc(sights).capitalize()} catch(es) your eye. You hear {rc(sounds)} 
-    and smell {rc(smells)} on the air. You can't help but notice 
-    {rc(details)} and {rc(details)}."""
+    This {street['moods']} {street['infastructure_type']} is primarily used for {street['use']}.
+    (A/An) {street['sights']} catch(es) your eye. You hear {street['sounds']} 
+    and smell {street['smells']} on the air. You can't help but notice 
+    {street['details']} and {street['details']}."""
     )
 
 

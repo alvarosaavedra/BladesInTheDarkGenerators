@@ -22,10 +22,11 @@ def rc(variable):
 
 def print_ghost():
     """This will print text that describes a new ghost"""
+    ghost = new_ghost()
     print(
         f"""
-    This is the ghost of {rc(first_name)} '{rc(aliases)}' {rc(family_name)}.
-    There is/are (a/an) {rc(ghostly_effect)} when this {rc(ghost_trait)} spirit appears!
+    This is the ghost of {ghost['name']} '{ghost['aliases']}' {ghost['family_name']}.
+    There is/are (a/an) {ghost['effect']} when this {ghost['trait']} spirit appears!
     """
     )
 

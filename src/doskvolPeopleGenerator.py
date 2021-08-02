@@ -24,27 +24,20 @@ def rc(variable):
 def print_person(quality):
     """This prints a random description of a person, the "quality" argument
     needs to be "rare" or "common"""
-    if quality == "rare":
-        print(
-            f"""
-        {rc(first_name)} '{rc(aliases)}' {rc(family_name)}:
-        A/An {rc(appearance)} {rc(gender)} {random.choices(heritage, weights=[50, 10, 5, 5, 5, 5])[0]} wearing/using a/an {rc(style)}.
-        They work as a {rc(rare_profession)} and use {rc(methods)} to try and gain/cause {rc(goals)}.
-        Overall, they seem {rc(traits)} but are also {rc(quirks)} They are interested in {rc(interests)}.
-        """
-        )
-    elif quality == "common":
-        print(
-            f"""
-        {rc(first_name)} '{rc(aliases)}' {rc(family_name)}:
-        A {rc(appearance)} {rc(gender)} {random.choices(heritage, weights=[50, 10, 5, 5, 5, 5])[0]} wearing/using a/an {rc(style)}.
-        They work as a {rc(common_profession)} and use {rc(methods)} to try and gain/cause {rc(goals)}.
-        Overall, they seem {rc(traits)} but are also {rc(quirks)} They are interested in {rc(interests)}.
-        """
-        )
-    else:
+    if (quality != "rare" and quality != "common"):
         print("Please enter 'rare' or 'common' as an argument")
-
+        return None
+    person = new_people(quality)
+    
+    print(
+        f"""
+    {person['first_name']} '{person['aliases']}' {person['family_name']}:
+    A/An {person['appearance']} {person['gender']} {person['heritage']} wearing/using a/an {person['style']}.
+    They work as a {person['profession']} and use {person['methods']} to try and gain/cause {person['goals']}.
+    Overall, they seem {person['traits']} but are also {person['quirks']} They are interested in {person['interests']}.
+    """
+    )
+    
 def new_people(quality):
     return {
         'first_name': rc(first_name),

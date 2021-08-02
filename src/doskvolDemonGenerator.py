@@ -22,12 +22,13 @@ def rc(variable):
 
 def print_demon():
     """This will print text describing a new demon"""
+    demon = new_demon()
     print(
         f"""
-    Tremble at the sight of {rc(demon_name)}!
-    Behold, {rc(demon_features)} and {rc(demon_features)}.
-    This {rc(demonic_affinity)} demon has a {rc(demonic_aspect)} aspect.
-    This demon desires {rc(demon_desire)} above all else!
+    Tremble at the sight of {demon['name']}!
+    Behold, {demon['features'][0]} and {demon['features'][1]}.
+    This {demon['affinity']} demon has a {demon['aspect']} aspect.
+    This demon desires {demon['desire']} above all else!
     """
     )
 
