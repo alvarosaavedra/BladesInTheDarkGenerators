@@ -31,14 +31,25 @@ def print_street():
     )
 
 
+def new_street():
+    return {
+        'moods':rc(moods),
+        'infastructure_type': rc(infastructure_type),
+        'use':rc(use),
+        'sights':rc(sights).capitalize(),
+        'sounds': rc(sounds),
+        'smells': rc(smells),
+        'details': [rc(details), rc(details)]
+    }
+
 # Establish lists from json dumps
-moods = json_retreiver("Streets/moods.json")
-sights = json_retreiver("Streets/sights.json")
-sounds = json_retreiver("Streets/sounds.json")
-smells = json_retreiver("Streets/smells.json")
-use = json_retreiver("Streets/use.json")
-infastructure_type = json_retreiver("Streets/infastructure_type.json")
-details = json_retreiver("Streets/details.json")
+moods = json_retreiver("src/Streets/moods.json")
+sights = json_retreiver("src/Streets/sights.json")
+sounds = json_retreiver("src/Streets/sounds.json")
+smells = json_retreiver("src/Streets/smells.json")
+use = json_retreiver("src/Streets/use.json")
+infastructure_type = json_retreiver("src/Streets/infastructure_type.json")
+details = json_retreiver("src/Streets/details.json")
 
 if __name__ == "__main__":
     print_street()

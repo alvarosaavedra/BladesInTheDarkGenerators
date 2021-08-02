@@ -45,22 +45,38 @@ def print_person(quality):
     else:
         print("Please enter 'rare' or 'common' as an argument")
 
+def new_people(quality):
+    return {
+        'first_name': rc(first_name),
+        'aliases': rc(aliases),
+        'family_name': rc(family_name),
+        'appearance': rc(appearance),
+        'gender': rc(gender),
+        'heritage': random.choices(heritage, weights=[50, 10, 5, 5, 5, 5])[0],
+        'style': rc(style),
+        'profession': rc(rare_profession) if quality == "rare" else rc(common_profession),
+        'methods': rc(methods),
+        'goals': rc(goals),
+        'traits': rc(traits),
+        'quirks': rc(quirks),
+        'interests': rc(interests)}
 
-heritage = json_retreiver("People/heritage.json")
-gender = json_retreiver("People/gender.json")
-appearance = json_retreiver("People/appearance.json")
-goals = json_retreiver("People/goals.json")
-methods = json_retreiver("People/methods.json")
-common_profession = json_retreiver("People/common_profession.json")
-rare_profession = json_retreiver("People/rare_profession.json")
-style = json_retreiver("People/style.json")
-traits = json_retreiver("People/traits.json")
-interests = json_retreiver("People/interests.json")
-quirks = json_retreiver("People/quirks.json")
 
-first_name = json_retreiver("People/first_names.json")
-family_name = json_retreiver("People/family_names.json")
-aliases = json_retreiver("People/aliases.json")
+heritage = json_retreiver("src/People/heritage.json")
+gender = json_retreiver("src/People/gender.json")
+appearance = json_retreiver("src/People/appearance.json")
+goals = json_retreiver("src/People/goals.json")
+methods = json_retreiver("src/People/methods.json")
+common_profession = json_retreiver("src/People/common_profession.json")
+rare_profession = json_retreiver("src/People/rare_profession.json")
+style = json_retreiver("src/People/style.json")
+traits = json_retreiver("src/People/traits.json")
+interests = json_retreiver("src/People/interests.json")
+quirks = json_retreiver("src/People/quirks.json")
+
+first_name = json_retreiver("src/People/first_names.json")
+family_name = json_retreiver("src/People/family_names.json")
+aliases = json_retreiver("src/People/aliases.json")
 
 
 if __name__ == "__main__":

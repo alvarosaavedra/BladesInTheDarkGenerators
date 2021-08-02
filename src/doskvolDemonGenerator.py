@@ -31,12 +31,20 @@ def print_demon():
     """
     )
 
+def new_demon():
+    return {
+        'name': rc(demon_name),
+        'features': [rc(demon_features), rc(demon_features)],
+        'affinity': rc(demonic_affinity),
+        'aspect': rc(demonic_aspect),
+        'desire': rc(demon_desire)
+    }
 
-demon_name = json_retreiver("Demons/demon_names.json")
-demon_features = json_retreiver("Demons/demon_features.json")
-demonic_aspect = json_retreiver("Demons/demonic_aspect.json")
-demonic_affinity = json_retreiver("Demons/demonic_affinity.json")
-demon_desire = json_retreiver("Demons/demon_desire.json")
+demon_name = json_retreiver("src/Demons/demon_names.json")
+demon_features = json_retreiver("src/Demons/demon_features.json")
+demonic_aspect = json_retreiver("src/Demons/demonic_aspect.json")
+demonic_affinity = json_retreiver("src/Demons/demonic_affinity.json")
+demon_desire = json_retreiver("src/Demons/demon_desire.json")
 
 if __name__ == "__main__":
     print_demon()

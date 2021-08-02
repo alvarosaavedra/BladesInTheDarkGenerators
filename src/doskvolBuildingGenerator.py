@@ -39,12 +39,20 @@ def print_building(quality):
     else:
         print("Please enter 'rare' or 'common' as an argument")
 
+def new_building(quality):
+    return {
+        'exterior_details': rc(exterior_details),
+        'material': rc(material),
+        'use': rc(rare_use) if quality == "rare" else rc(common_use),
+        'interior_details': [rc(interior_details),rc(interior_details)]
+    }
 
-common_use = json_retreiver("Buildings/common_use.json")
-rare_use = json_retreiver("Buildings/rare_use.json")
-material = json_retreiver("Buildings/material.json")
-exterior_details = json_retreiver("Buildings/exterior_details.json")
-interior_details = json_retreiver("Buildings/interior_details.json")
+
+common_use = json_retreiver("src/Buildings/common_use.json")
+rare_use = json_retreiver("src/Buildings/rare_use.json")
+material = json_retreiver("src/Buildings/material.json")
+exterior_details = json_retreiver("src/Buildings/exterior_details.json")
+interior_details = json_retreiver("src/Buildings/interior_details.json")
 
 
 if __name__ == "__main__":
