@@ -2,7 +2,7 @@
 # Uses the tables at the end of Blades in the Dark to generate a description
 # for a random ghost.
 
-from util import rc, json_retreiver
+from src.util import rc, json_retreiver
 
 def print_ghost():
     """This will print text that describes a new ghost"""

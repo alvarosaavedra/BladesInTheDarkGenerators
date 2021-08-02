@@ -4,7 +4,7 @@
 import sys
 import random
 
-from util import rc, json_retreiver
+from src.util import rc, json_retreiver
 
 def print_person(quality):
     """This prints a random description of a person, the "quality" argument

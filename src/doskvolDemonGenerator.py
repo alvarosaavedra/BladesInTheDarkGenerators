@@ -2,7 +2,7 @@
 # Uses the tables at the end of Blades in the Dark to generate a description
 # for a random demon.
 
-from util import rc, json_retreiver
+from src.util import rc, json_retreiver
 
 def print_demon():
     """This will print text describing a new demon"""

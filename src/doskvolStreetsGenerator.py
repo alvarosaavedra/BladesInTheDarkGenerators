@@ -1,7 +1,7 @@
 # doskvolStreetsGenerator.py
 # Uses the tables at the end of Blades in the Dark to generate a description
 # for a random city street.
-from util import rc, json_retreiver
+from src.util import rc, json_retreiver
 
 
 def print_street():

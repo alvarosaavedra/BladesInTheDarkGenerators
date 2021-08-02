@@ -3,7 +3,7 @@
 # for a random building. Use an argument of "rare" or "common" in the terminal
 import sys
 
-from util import rc, json_retreiver
+from src.util import rc, json_retreiver
 
 
 def print_building(quality):
