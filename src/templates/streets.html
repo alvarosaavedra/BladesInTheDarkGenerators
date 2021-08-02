@@ -1,7 +1,9 @@
-<!doctype html>
+{% extends 'template.html' %}
+{% block content %}
 <p>
     This {{moods}} {{infastructure_type}} is primarily used for {{use}}.
     (A/An) {{sights.capitalize()}} catch(es) your eye. You hear {{sounds}} 
     and smell {{smells}} on the air. You can't help but notice 
     {{details[0]}} and {{details[1]}}.
 </p>
+{% endblock %}

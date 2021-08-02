@@ -1,7 +1,9 @@
-<!doctype html>
+{% extends 'template.html' %}
+{% block content %}
 <p>
     Tremble at the sight of {{name}}!
     Behold, {{features[0]}} and {{features[1]}}.
     This {{affinity}} demon has a {{aspect}} aspect.
     This demon desires {{desire}} above all else!
 </p>
+{% endblock %}
