@@ -1,24 +1,9 @@
 # doskvolBuildingGenerator.py
 # Uses the tables at the end of Blades in the Dark to generate a description
 # for a random building. Use an argument of "rare" or "common" in the terminal
-
-import random
-import json
 import sys
 
-
-def json_retreiver(json_filename):
-    """Call this from a variable with a filename string to populate
-    with json content"""
-    filename = json_filename
-    with open(filename) as f:
-        return json.load(f)
-
-
-def rc(variable):
-    """rc = random choice. Picks a random item from the list and returns
-    it. This is mostly to shorten up the variables in the print command"""
-    return random.choice(variable)
+from util import rc, json_retreiver
 
 
 def print_building(quality):
