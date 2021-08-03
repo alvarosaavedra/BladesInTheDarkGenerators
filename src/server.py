@@ -7,6 +7,7 @@ from src.doskvolGhostgenerator import new_ghost
 from src.doskvolStreetsGenerator import new_street
 from src.doskvolBuildingGenerator import new_building
 from src.doskvolPeopleGenerator import new_people
+from src.doskvolScoreGenerator import new_score
 
 
 app = Flask(__name__)
@@ -36,3 +37,7 @@ def ghost():
 @app.route("/street")
 def street():
     return render_template('streets.html', **new_street())
+
+@app.route("/score")
+def score():
+    return render_template('score.html', **new_score())
